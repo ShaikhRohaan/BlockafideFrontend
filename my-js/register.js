@@ -13,7 +13,16 @@ async function register(){
         title: 'Oops...',
         text: 'Please fill all fields!',
       })
-    } else {
+      
+    }
+    else if(phone.length > 9){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'valid phone number',
+      })
+    }
+    else {
       // if(password == cpassword)
       // {
         await fetch("http://217.160.146.227:3000/registerexist?email="+email+"&phone"+phone)

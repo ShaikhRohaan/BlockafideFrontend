@@ -328,6 +328,11 @@ async function transfer(tokenid, rcvwlt, caddress, price) {
       {
         "inputs": [
           {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
             "internalType": "string",
             "name": "tokenURI",
             "type": "string"
@@ -605,11 +610,6 @@ async function transfer(tokenid, rcvwlt, caddress, price) {
                 "internalType": "bool",
                 "name": "isForSale",
                 "type": "bool"
-              },
-              {
-                "internalType": "address",
-                "name": "seller",
-                "type": "address"
               }
             ],
             "internalType": "struct Blockafide.Nft[]",
@@ -675,11 +675,6 @@ async function transfer(tokenid, rcvwlt, caddress, price) {
                 "internalType": "bool",
                 "name": "isForSale",
                 "type": "bool"
-              },
-              {
-                "internalType": "address",
-                "name": "seller",
-                "type": "address"
               }
             ],
             "internalType": "struct Blockafide.Nft[]",
@@ -726,11 +721,6 @@ async function transfer(tokenid, rcvwlt, caddress, price) {
                 "internalType": "bool",
                 "name": "isForSale",
                 "type": "bool"
-              },
-              {
-                "internalType": "address",
-                "name": "seller",
-                "type": "address"
               }
             ],
             "internalType": "struct Blockafide.Nft",
@@ -861,9 +851,9 @@ async function transfer(tokenid, rcvwlt, caddress, price) {
         "stateMutability": "view",
         "type": "function"
       }
-    ];
+    ]
  
-    var ContractAddress = '0x03642223B11C53a274e3ba0C1D6601d85975EEA3'
+    var ContractAddress = '0xc68DC2f28b5D22C55e41ca9C956231a781489D5F'
 
  
   if (user) {

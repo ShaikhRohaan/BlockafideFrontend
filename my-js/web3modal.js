@@ -321,6 +321,11 @@ async function getNfts() {
     {
       "inputs": [
         {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
           "internalType": "string",
           "name": "tokenURI",
           "type": "string"
@@ -598,11 +603,6 @@ async function getNfts() {
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft[]",
@@ -668,11 +668,6 @@ async function getNfts() {
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft[]",
@@ -719,11 +714,6 @@ async function getNfts() {
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft",
@@ -855,7 +845,7 @@ async function getNfts() {
       "type": "function"
     }
   ]
-  var ContractAddress = '0x03642223B11C53a274e3ba0C1D6601d85975EEA3'
+  var ContractAddress = '0xc68DC2f28b5D22C55e41ca9C956231a781489D5F'
 
   const contract = new web3.eth.Contract(contractAbi, ContractAddress);
 
@@ -1050,6 +1040,11 @@ async function idgetNfts(value) {
     {
       "inputs": [
         {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
           "internalType": "string",
           "name": "tokenURI",
           "type": "string"
@@ -1327,11 +1322,6 @@ async function idgetNfts(value) {
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft[]",
@@ -1397,11 +1387,6 @@ async function idgetNfts(value) {
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft[]",
@@ -1448,11 +1433,6 @@ async function idgetNfts(value) {
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft",
@@ -1585,7 +1565,7 @@ async function idgetNfts(value) {
     }
   ]
 
-  var ContractAddress = '0x03642223B11C53a274e3ba0C1D6601d85975EEA3'
+  var ContractAddress = '0xc68DC2f28b5D22C55e41ca9C956231a781489D5F'
 
   var contract = new web3.eth.Contract(contractABI, ContractAddress);
 
@@ -1798,6 +1778,11 @@ async function upload(){
     {
       "inputs": [
         {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
           "internalType": "string",
           "name": "tokenURI",
           "type": "string"
@@ -2075,11 +2060,6 @@ async function upload(){
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft[]",
@@ -2145,11 +2125,6 @@ async function upload(){
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft[]",
@@ -2196,11 +2171,6 @@ async function upload(){
               "internalType": "bool",
               "name": "isForSale",
               "type": "bool"
-            },
-            {
-              "internalType": "address",
-              "name": "seller",
-              "type": "address"
             }
           ],
           "internalType": "struct Blockafide.Nft",
@@ -2332,7 +2302,7 @@ async function upload(){
       "type": "function"
     }
   ]
-  var ContractAddress = '0x03642223B11C53a274e3ba0C1D6601d85975EEA3'
+  var ContractAddress = '0xc68DC2f28b5D22C55e41ca9C956231a781489D5F'
 
   const contract = new web3.eth.Contract(contractAbi, ContractAddress);
 
@@ -2413,7 +2383,7 @@ console.log(`https://ipfs.io/ipfs/${added.cid}`)
 
   const tokenURI = `https://ipfs.io/ipfs/${added.cid}`;
 
-  contract.methods.mintNFT(tokenURI).send({ from: account })
+  contract.methods.mintNFT( account , tokenURI).send({ from: account })
   .on('transactionHash', (hash) => {
     console.log('Transaction hash:', hash);
   })
