@@ -1,4 +1,4 @@
-function register(){
+async function register(){
 
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -16,11 +16,11 @@ function register(){
     } else {
       // if(password == cpassword)
       // {
-        fetch("http://217.160.146.227:3000/registerexist?email="+email+"&phone"+phone)
+        await fetch("http://217.160.146.227:3000/registerexist?email="+email+"&phone"+phone)
         .then(function(res) {
             return res.json();
         })
-        .then(function(data) {
+        .then(async function(data) {
             console.log(data,"data");
                 // email = data[0].email;
                 // name = data[0].name;
@@ -34,7 +34,7 @@ function register(){
           } else {
             // alert("data is ready to insert")
            
-            fetch("http://217.160.146.227:3000/register", {
+            await fetch("http://217.160.146.227:3000/register", {
               headers: {
                 "Content-type": "application/json; charset=UTF-8"
               },
