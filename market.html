@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFT Marketplace</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .collapse li{
+            color: black;
+    
+        }
+        .container-fluid
+        {
+            padding: 5px;
+        }
+        .navbar-brand
+        {
+            margin-left: 1%;
+        }
+        .navbar-brand img{
+            height: 40px;
+        }
+    </style>
+    </head>
+    
+    <body onload="check()">
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+    
+     <!-- Header Section Begin -->
+        <header class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="./index.html"><img src="logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown" style="width: 100%; margin-left: 15%; font-size: large; font-weight: bold; color: black;">
+                <ul class="navbar-nav" style="width: 100%;">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="how.html">How it work</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="market.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        NFTs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="qrcode.html">QRcode</a>
+                        <a class="dropdown-item" href="market.html">Blockafide Market</a>
+                        <a class="dropdown-item" href="mint.html">Mint NFT</a>
+                    </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                    </ul>
+                        <div class="nav-item " style="width: 20%; text-align: right;">
+                        <span class="navbar-text">
+                            <button class="mr-sm-2" id="myBtn" style="border: none; background: none;"><a ><i class="fa-solid fa-wallet"></i></a></button>
+                            <button id="btn-logout" onclick="logOut()" style="border: none; background: none; display: none;"><a  style="content: \f555; color: green; " ><i class="fa-solid fa-wallet"></i></a></button>
+                            <button id="user_login" style="border: none; background: none;"><a href="./login.html" style="color: black;" ><i class="fa-solid fa-user"></i></a></button>
+                            <button id="user_logout" onclick="logoutac()" style="border: none; background: none; display: none;"><a style="content: \f555; color: green;"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+                        </span>
+                        </div>
+                
+                </div>
+            </nav>
+
+        </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="breadcrumb__text">
+                        <h4>NFT's MarketPlace</h4>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Home</a>
+                            <span>NFT's MarketPlace</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="filter__controls">
+                        <li data-filter=".new-arrivals">NFT's MarketPlace</li>                       
+                    </ul>
+                </div>
+            </div>
+            <div class="row product__filter" id="nfts">
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- The Modal -->
+    <!-- <div id="myModal" class="modal">
+  
+        <div class="modal-content mx-auto w-50 my-5">
+            <div class="modal-header">
+                <h5 class="modal-title">Please Connect</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <button class="btn w-50 mx-auto mt-5" type="button" onclick="login()" id="btn-metamask"
+            style="background-color: black; color: white;">Connect with Metamask</button>
+        </br>
+            <button class="btn w-50 mx-auto mb-5" type="button" onclick="login()" id="btn-login"
+                style="background-color: black; color: white;">Connect with Others</button>
+        </div>
+    </div> -->
+
+     <!-- Footer Section Begin -->
+     <!-- Footer Section Begin -->
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <a href="#"><img src="white logo.png" alt=""></a>
+                        </div>
+                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <div class="hero__social">
+                            <a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.pinterest.com/" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/" data-toggle="tooltip" data-placement="top" title="Youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-0 col-md-4 col-sm-12">
+                    <div class="footer__widget">
+                        <h6>Options</h6>
+                        <ul>
+                            <li><a href="./market.html">Blockafide MarketPlace</a></li>
+                            <li><a href="./mint.html">NFT's Mint</a></li>
+                            <li><a href="./qrcode.html">QR Code</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="footer__widget">
+                        <h6>Quick Links</h6>
+                        <ul>
+                            <li><a  href="https://mail.google.com/mail/u/0/#inbox"><h5 style="color: white;">Gmail Address</h5></a></li>
+                            <li><a href="https://mail.google.com/mail/u/0/#inbox">blockafide069@gmail.com</a></li>
+                            <li><a href="#"><h5 style="color: white;">Phone No</h5></a></li>
+                            <li><a href="#">+88019 339 702 520</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+            
+                <h5>blockafide</h5>
+            
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p>©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            All rights reserved | This websute is made with by <a href="https://www.socsols.com/" target="_blank">SOC Solutions</a>
+                        </p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="./my-js/web3modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<script src="https://unpkg.com/moralis-v1/dist/moralis.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider"></script>
+    <script src="./my-js/market.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $("#toggle").click(function() {
+        $(this).toggleClass("on");
+        $("#menu").slideToggle();
+        });
+    </script>
+</body>
+
+</html>

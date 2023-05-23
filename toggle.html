@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <!-- Css Styles -->
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+ <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+ <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+ <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+ <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+ <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+ <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+ <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+ <!-- <link rel="stylesheet" href="css/about.style.css" type="text/css"> -->
+
+</head>
+
+<body onload="check()">
+ <!-- Page Preloder -->
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="header__logo">
+                    <a href="./index.html"><img src="logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="#">NFT's</a>
+                            <ul class="dropdown">
+                                <li><a href="./market.html">Blockafide MarketPlace</a></li>
+                                <li><a href="./qrcode.html">QR Code</a></li>
+                                <li><a href="./mint.html">Mint NFT</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./how.html"> How It's Works</a></li>
+                        <li><a href="./contact.html">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <div class="header__nav__option">
+                    <!-- <button id="myBtn" style="border: none; background: none;"><a class="search-switch" style="color: red; " ><i class="fa-solid fa-wallet"></i></a></button>
+                    <button id="btn-logout" style="border: none; background: none; display: none;"><a class="search-switch" style="color: green;"><i class="fa-solid fa-wallet"></i></a></button>
+                    <button id="user_logout" onclick="logoutac()" style="border: none; background: none; display: none;"><a class="search-switch" style="content: \f555; color: green;"><i class="fa-solid fa-right-to-bracket"></i></a></button> -->
+                    <button id="myBtn" style="border: none; background: none;"><a ><i class="fa-solid fa-wallet"></i></a></button>
+                    <button id="btn-logout" style="border: none; background: none; display: none;"><a  style="content: \f555; color: green; " ><i class="fa-solid fa-wallet"></i></a></button>
+                    <button id="user_login" onclick="logOut()" style="border: none; background: none;"><a href="./login.html" style="color: black;" ><i class="fa-solid fa-user"></i></a></button>
+                    <button id="user_logout" onclick="logoutac()" style="border: none; background: none; display: none;"><a style="content: \f555; color: green;"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="toggle" class="canvas__open">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+              <div class="label" id="menu">
+                 <a style="color: black;" href="./index.html">Home</a><br>
+                 <a style="color: black;" href="./about.html">About</a><br>
+                            <a style="color: black;" href="./market.html">MarketPlace</a><br>
+                            <a style="color: black;" href="./qrcode.html">QR Code</a><br>
+                            <a style="color: black;" href="./mint.html">Mint NFT</a><br>
+                    <a style="color: black;" href="./how.html"> How It's Works</a><br>
+                    <a style="color: black;" href="./contact.html">Contacts</a><br>
+                    <button id="myBtn" style="border: none; background: none;"><i class="fa-solid fa-wallet"></i></button>
+                    <button id="btn-logout" onclick="logOut()" style="border: none; background: none; display: none;"><i class="fa-solid fa-wallet" style="content: \f555; color: green; "></i></button>
+                    
+                    <button id="user_login" style="border: none; background: none;"><a href="./login.html" style="color: black;" ><i class="fa-solid fa-user"></i></a></button>
+                    <button id="user_logout" onclick="logoutac()" style="border: none; background: none; display: none;"><a style="content: \f555; color: green;"><i class="fa-solid fa-right-from-bracket"></i></a></button>
+                </div>      -->
+                </div>
+    </div>
+</header>
+<!-- Header Section End -->
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+</div>
+
+</body>
+</html>
